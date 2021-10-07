@@ -16,7 +16,7 @@ end
 # Make sure that one string (regexp) occurs before or after another one
 #   on the same page
 
-Then /I should see "(.*)" before "(.*)"/ do |e1, e2|    #step definition for sorting tests     
+Then /I should see "(.*)" before "(.*)"/ do |e1, e2|    # For sorting tests     
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
   regular_exp = /#{e1}.*{e2}/m
@@ -48,7 +48,7 @@ Then /I should see all the movies/ do
   # fail "Unimplemented"
 end
 
-Then /I should see the movies : (.*)/ do |movie_list|    #step definition for filtering tests
+Then /I should see the movies : (.*)/ do |movie_list|    #For sorting filtering tests
   # pending # Write code here that turns the phrase above into concrete actions
   movies = movie_list.split(', ')
   for movie in movies
@@ -56,7 +56,7 @@ Then /I should see the movies : (.*)/ do |movie_list|    #step definition for fi
   end
 end
  
-Then /I should not see the movies : (.*)/ do |movie_list|  #step definition for filtering tests  
+Then /I should not see the movies : (.*)/ do |movie_list|  #for sorting  filtering tests  
   # pending # Write code here that turns the phrase above into concrete actions
   movies = movie_list.split(', ')
   for movie in movies
